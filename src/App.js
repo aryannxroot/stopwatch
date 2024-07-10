@@ -6,7 +6,7 @@ function App() {
   
   const [time,setTime] = useState(0);
   const [running,setRunning] = useState(false);
-  let interval = useRef();
+  const interval = useRef();
 
   useEffect(() => {
 
@@ -26,7 +26,7 @@ function App() {
   
   const handleReset = () => {
     setRunning(false);
-    clearInterval(interval);
+    // clearInterval(interval.current);
     setTime(0);
   }
 
