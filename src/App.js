@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className='w-full h-screen flex flex-col items-center justify-center py-8'>
-    <h1 className='text-2xl font-semibold pb-2 '>01-Stopwatch</h1>
+    <h1 className='text-3xl font-semibold pb-2 '>01-Stopwatch</h1>
     <div className='flex space-x-1 font-semibold py-4'>
       <span>{('0' + Math.floor((time / 60000) % 60)).slice(-2)} :</span>
       <span>{('0' + Math.floor((time / 1000) % 60)).slice(-2)} :</span>
@@ -42,16 +42,16 @@ function App() {
     <div className='w-1/5 flex flex-row justify-center'>
       {
         running 
-        ?   <button className='border rounded-lg  py-2 px-10 mx-8' 
+        ?   <button className='border rounded-lg text-xl  py-2 px-10 mx-8' 
               onClick={() => setRunning(false)}>
               Stop
             </button>
-        :   <button className='border rounded-lg  py-2 px-10 mx-8 '
+        :   <button className='border rounded-lg text-xl  py-2 px-10 mx-8 '
               onClick={() => setRunning(true)}>
               Start
               </button>
       }
-      <button className='border rounded-lg  py-2 px-10 mx-8'
+      <button className='border rounded-lg text-xl  py-2 px-10 mx-8'
         onClick={() => handleReset()}>
         Reset
       </button>
