@@ -12,8 +12,8 @@ function App() {
 
     if(running){
       interval.current = setInterval(() => {
-        setTime(prevTime => prevTime + 10)
-      },10);
+        setTime(prevTime => prevTime + 1)
+      },1);
     }else if(!running){
       clearInterval(interval.current);
     }
@@ -36,22 +36,22 @@ function App() {
     <div className='flex space-x-1 font-semibold py-4'>
       <span>{('0' + Math.floor((time / 60000) % 60)).slice(-2)} :</span>
       <span>{('0' + Math.floor((time / 1000) % 60)).slice(-2)} :</span>
-      <span>{('0' + Math.floor((time / 10) % 100)).slice(-2)}</span>
+      <span>{('00' + Math.floor((time) % 1000)).slice(-3)}</span>
     </div>
      
-    <div className='w-1/5 flex flex-row justify-between'>
+    <div className='w-1/5 flex flex-row justify-center'>
       {
         running 
-        ?   <button className='border rounded-lg  py-2 px-10 ' 
+        ?   <button className='border rounded-lg  py-2 px-10 mx-8' 
               onClick={() => setRunning(false)}>
               Stop
             </button>
-        :   <button className='border rounded-lg  py-2 px-10 '
+        :   <button className='border rounded-lg  py-2 px-10 mx-8 '
               onClick={() => setRunning(true)}>
               Start
               </button>
       }
-      <button className='border rounded-lg  py-2 px-10 '
+      <button className='border rounded-lg  py-2 px-10 mx-8'
         onClick={() => handleReset()}>
         Reset
       </button>
