@@ -34,9 +34,9 @@ function App() {
     <div className='w-full h-screen flex flex-col items-center justify-center py-8'>
     <h1 className='text-3xl font-semibold pb-2 '>01-Stopwatch</h1>
     <div className='flex space-x-1 font-semibold py-4'>
-      <span className='text-lg'>{('0' + Math.floor((time / 60000) % 60)).slice(-2)} :</span>
-      <span className='text-lg'>{('0' + Math.floor((time / 1000) % 60)).slice(-2)} :</span>
-      <span className='text-lg'>{('00' + Math.floor((time) % 1000)).slice(-3)}</span>
+      <span className='text-6xl my-6'>{('0' + Math.floor((time / 60000) % 60)).slice(-2)} :</span>
+      <span className='text-6xl my-6'>{('0' + Math.floor((time / 1000) % 60)).slice(-2)} :</span>
+      <span className='text-6xl my-6'>{('00' + Math.floor((time) % 1000)).slice(-3)}</span>
     </div>
      
     <div className='w-1/5 flex flex-row justify-center'>
